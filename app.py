@@ -24,7 +24,6 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from sklearn.feature_extraction.text import TfidfVectorizer
 from wordcloud import WordCloud
-triu = np.triu
 
 # Define the web scraping function
 def scrape_reviews():
