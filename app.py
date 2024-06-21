@@ -24,7 +24,15 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from sklearn.feature_extraction.text import TfidfVectorizer
 from wordcloud import WordCloud
-import scipy.linalg as linalg
+try:
+    from scipy.linalg import triu
+except ImportError:
+    # Handle ImportError by using numpy's triu as alternative
+    import numpy as np
+    triu = np.triu
+
+# Use triu function as needed in your script
+
 
 # Define the web scraping function
 def scrape_reviews():
