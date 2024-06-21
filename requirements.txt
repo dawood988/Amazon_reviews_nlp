@@ -9,4 +9,4 @@ requests
 nltk
 gensim
 wordcloud
-sklearn
+scikit-learn
